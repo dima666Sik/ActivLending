@@ -1,0 +1,281 @@
+/* specification */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: calc(0.1em + 6vw);
+}
+
+h2 {
+    font-size: calc(0.1em + 3vw);
+}
+
+/* scroll edit */
+::-webkit-scrollbar {
+    width: 5px;
+    /* ширина нового скроллбара */
+}
+
+::-webkit-scrollbar-track {
+    background: #b61b1bcf;
+    /* цвет фона у дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+    border: 3px solid #491414;
+    /* толщина, стиль и цвет рамки */
+}
+
+/* Header */
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar {
+    /* background-image: linear-gradient(#e88383 100%, #c25050 100%, #ff8a8a 100%); */
+    padding-top: 25px;
+    padding-bottom: 10px;
+    min-height: 25%;
+}
+
+.nav-item {
+    margin-right: 25px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: #e4381C;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #e4381C !important;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.primary-btn {
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 15px;
+    /* color: #21ebff; */
+    color: rgb(225, 101, 33);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
+}
+
+.primary-btn:hover {
+    /* background:#21ebff; */
+    background-image: linear-gradient(rgb(228, 56, 28) 60%, rgb(243, 133, 74) 100%, rgb(225, 101, 33) 40%);
+    color: #111;
+    /* box-shadow: 0 0 50px #21ebff; */
+    box-shadow: 0 0 50px rgb(225, 101, 33);
+    transition-delay: 0.1s;
+}
+
+.primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    /* border-top: 2px solid #21ebff;
+    border-left: 2px solid #21ebff; */
+    border-top: 2px solid rgb(225, 101, 33);
+    border-left: 2px solid rgb(228, 56, 28);
+    transition: 0.5s;
+}
+
+.primary-btn:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.primary-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    /* border-bottom: 2px solid #21ebff;
+    border-right: 2px solid #21ebff; */
+    border-bottom: 2px solid rgb(225, 101, 33);
+    border-right: 2px solid rgb(228, 56, 28);
+    transition: 0.5s;
+}
+
+.primary-btn:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+
+    z-index: 0;
+}
+
+.hero-text, .content-add {
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* About */
+.about,.gallery,.contacts {
+    background: rgb(21, 21, 21);
+    color: rgb(220, 220, 220);
+}
+
+.section-title h2, h4 {
+    margin-top: 25px;
+}
+
+.aboutus-page-text p {
+    text-indent: 3em;
+}
+
+/* Gallery */
+.myBtnContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.gallery .column {
+    float: left;
+    width: 33.33%;
+    display: block;
+    /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.gallery .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.gallery .content {
+    background-color: rgba(238, 71, 46, 0.2)
+}
+
+/* Style the buttons */
+.gallery .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.gallery .btn:hover {
+    color: #e4381C;
+}
+
+/* Add a dark background color to the active button */
+.gallery .btn.active {
+    color: white;
+}
+
+.add {
+    position: relative;
+}
+
+/* Contacts */
+.footer-widget h5 {
+	font-size: 20px;
+	font-weight: 500;
+	color: #ffffff;
+	text-transform: uppercase;
+    margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.footer-widget .workout-program li {
+	list-style: square;
+}
+
+.footer-widget .workout-program li a {
+    text-decoration: none;
+	display: block;
+	font-size: 16px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	color: #ffffff;
+	line-height: 18px;
+	margin-bottom: 22px;
+}
+
+.footer-widget .footer-blog .fb-item span {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: block;
+	color: #afb4bf;
+}
+
+.footer-widget .footer-blog .fb-item span i {
+	color: #e4381C;
+	margin-right: 5px;
+}
+
+
+.footer-widget .footer-blog .fb-item:hover h6 {
+	color: #e4381C;
+}
+
+.footer-widget .footer-blog .fb-item h6 {
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.fb-item{
+    text-decoration: none;
+}
+/* Footer */
+.copyright-text {
+	background: #000000;
+	border-top: 1px solid #0a0a0a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(147, 147, 147);
+}
