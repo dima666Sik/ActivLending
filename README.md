@@ -9,4 +9,4 @@
 - Menu has anchors for navigating the site.
 
 ## Usage
-You can check my work by clicking on this link: https://lazyness.github.io/ActivLending/
+You can check my work by clicking on this link: https://dima666sik.github.io/ActivLending/
